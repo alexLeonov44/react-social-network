@@ -1,0 +1,192 @@
+@import '../../variables';
+
+.profile{
+  display: flex;
+    background-color:#F7F8FC;
+    width: 100%;
+
+    // box-shadow: 1px 20px 20px #f3f3f3;
+    // border-radius: 5px;
+
+    &__narrow__block{
+     
+      background-color:#F7F8FC;
+      width: 220px;
+
+      &__photo{
+        @include borderDecoration();
+        border:1px solid #dce1e6;
+        box-shadow: 1px 20px 20px #f3f3f3;
+        box-shadow: 1px 29px 81px -20px rgba(0,0,0,0.75);
+        border-radius: 5px;
+        background-color:#fff;
+        & img{
+           margin:10px;
+           width: 200px; 
+        }
+        & p{
+          text-align: center;
+           margin-left:10px;
+           margin-bottom: 10px;
+           width: 200px;
+           border-radius: 3px;
+           background-color: #e5ebf1;
+           border:none;
+           color:$button_color;
+            &:hover{
+              background-color:lighten(#e5ebf1, 2%);
+              color: lighten($button_color, 10%);
+            }
+            &:active{
+              background-color:darken(#e5ebf1, 4%);
+              color: darken($button_color, 10%);;
+            }
+        }
+      }
+
+      &__friends{
+         @include borderDecoration();
+        box-shadow: 1px 29px 81px -20px rgba(0,0,0,0.75);
+        background-color:$background_component;
+        margin-top: 10px;
+        height: 293px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+
+        &__cell{
+          margin:5px;
+          img{
+            width:60px;
+            height: 60px;
+            border-radius: 50px;
+          }
+        }
+      }
+    }
+
+    &__wide__block{
+       width: 100%;
+       margin-left : 10px;
+      &__info{
+        @include borderDecoration();
+        border:1px solid #dce1e6;
+        box-shadow: 10px 10px -1px #f3f3f3;
+        border-radius: 5px;
+        background-color:#fff;
+        padding-left : 10px;
+        padding-right : 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: $page_info_label_color;
+        &_name{
+         padding-bottom: 20px;
+         flex-direction: column;
+         border-bottom: 1px solid $page_border_color;
+         color: $page_info_user_color;
+          h1{
+            display: block;
+            font-weight:bold;
+            font-size: 30px;
+            line-height: 30px;
+            margin-bottom: 10px;
+            color: $page_name_color;
+          }
+          & span {
+            padding-top:2px;
+            padding-bottom:2px;
+            color:$page_name_color;
+            font-weight: 500;
+            font-family:sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            
+          }
+         & span:hover {
+          background-color: $background_common;
+            
+          }
+        }
+           div{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding-right: 20px;
+            
+            p{
+            color: #2a5885;
+            }
+          }
+          &__status{
+            flex-direction: column;
+            height: 100px;
+            width: 850px;
+            background-color: $background_common;
+            border:1px solid #dce1e6;
+            border-radius: 5px;
+            position: absolute;
+            top:100px;
+            left: 530px;
+            
+            & input{
+              @include borderDecoration();
+              margin:10px;
+              height: 25px;
+              width: 847px;
+            }
+            & button {
+              background-color:$background_dark;
+              margin:10px;
+              border-radius: 3px;
+              color:#F7F8FC;
+              width: 90px;
+              height: 30px;
+              border:none;
+            }
+            & button:hover {
+              background-color:lighten(#363740, 5%);
+            }
+            & button:active {
+              background-color:lighten(#363740, 10%);
+            }
+          }
+
+          &__contactsButton{
+            padding: 3px;
+            margin-left: 340px;
+            font-size: small;
+            cursor: pointer;
+            &:hover{
+              background-color: $background_common;
+            }
+            &:active {
+              background-color:lighten($background_common, 5%);
+            }
+          }
+      }
+
+      &_photos{
+        @include borderDecoration();
+        box-shadow: 10px 10px -1px #f3f3f3;
+        border:1px solid #dce1e6;
+        border-radius: 5px;
+        background-color: #fff;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+         &_photo{
+          background-color: #fff;
+           border:10px solid #fff;
+          img{
+            height: 130px;
+            width: 130px;
+          }
+         }
+      }
+      
+    }
+  }
+  
+ 

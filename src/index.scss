@@ -1,0 +1,60 @@
+@import 'variables';
+
+* {
+  margin: 0px;   // ЗВЕЗД ВСЕ ЭЛЕМЕНТЫ !!!
+  padding: 0px;
+  list-style: none;  //remove decoration for ul
+  outline: none; //КОНТУР  применяется ко всем сторонам 
+  // font-family: 'Roboto', -apple-system, system-ui ,sans-serif;  //настройки шрифтов  // перенес стили шрифтов для отображения инпутов и кнопок defoult without input button
+  a { 
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    color:inherit;
+   } 
+   font-family: Mulish;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+
+     letter-spacing: 0.2px;
+     
+}
+
+body{
+  background-color: $background_common;
+}
+
+.container {
+  display: grid;
+
+  grid-template-areas: 
+  "h"
+  "c";
+}
+ .container_contant{
+  display: flex;
+  grid-area: c;
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+ }
+.header{
+  grid-area: h;
+}
+
+.appLoader{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color:#363740;
+  & p{
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    color:wheat;
+    font-size: 250%
+  }
+}
+
+
+
